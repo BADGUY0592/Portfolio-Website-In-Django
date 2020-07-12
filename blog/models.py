@@ -7,3 +7,6 @@ class Blog(models.Model):
     description = models.TextField()
     date = models.DateField(("Date"),default="django.utils.timezone.now")
     urls = models.URLField(blank=True,max_length=50)
+
+    def __str__(self):
+        return self.title
